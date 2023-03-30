@@ -1,0 +1,15 @@
+/Users/apple/Projects/AssignmentOne/AssignmentOne/bin/Debug/net7.0/AssignmentOne
+/Users/apple/Projects/AssignmentOne/AssignmentOne/bin/Debug/net7.0/AssignmentOne.deps.json
+/Users/apple/Projects/AssignmentOne/AssignmentOne/bin/Debug/net7.0/AssignmentOne.runtimeconfig.json
+/Users/apple/Projects/AssignmentOne/AssignmentOne/bin/Debug/net7.0/AssignmentOne.dll
+/Users/apple/Projects/AssignmentOne/AssignmentOne/bin/Debug/net7.0/AssignmentOne.pdb
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.csproj.AssemblyReference.cache
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.GeneratedMSBuildEditorConfig.editorconfig
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.AssemblyInfoInputs.cache
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.AssemblyInfo.cs
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.csproj.CoreCompileInputs.cache
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.dll
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/refint/AssignmentOne.dll
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.pdb
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/AssignmentOne.genruntimeconfig.cache
+/Users/apple/Projects/AssignmentOne/AssignmentOne/obj/Debug/net7.0/ref/AssignmentOne.dll

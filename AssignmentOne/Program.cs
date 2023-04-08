@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 class AssignmentOne
 {
     static void Main(string[] args)
     {
-        QuestionThirty();
+        QuestionTwentyEight();
     }
 
     static void QuestionOne()
@@ -121,6 +122,74 @@ class AssignmentOne
         }else {
             Console.WriteLine("Invalid input. Retry");
             QuestionSeven();
+        }
+    }
+
+    static void QuestionEight()
+    {
+        Console.WriteLine("Prime numbers between 1 and 100:");
+        for (int i = 2; i <= 100; i++)
+        {
+            bool isPrime = true;
+            for (int j = 2; j < i; j++)
+            {
+                if (i % j == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime)
+            {
+                Console.Write(i + " ");
+            }
+        }
+
+    }
+
+    static void QuetionNine() {
+        Random random = new Random();
+        int secretNumber = random.Next(1, 101);
+        int numberOfGuesses = 0;
+        int previousGuess = -1;
+
+        while (true)
+        {
+            int guess = 0;
+            Console.Write("Guess the secret number between 1 and 100: ");
+            var guessInput = Console.ReadLine();
+            if (int.TryParse(guessInput, out guess))
+            {
+                guess = int.Parse(guessInput);
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Retry");
+                QuetionNine();
+            }
+
+            numberOfGuesses++;
+
+            if (guess == secretNumber)
+            {
+                Console.WriteLine($"Congratulations, you guessed the number in {numberOfGuesses} tries!");
+                break;
+            }
+            else if (guess == previousGuess)
+            {
+                Console.WriteLine("Same guess as before, try again!");
+                numberOfGuesses--;
+            }
+            else if (guess < secretNumber)
+            {
+                Console.WriteLine("Too small, try again!");
+            }
+            else
+            {
+                Console.WriteLine("Too large, try again!");
+            }
+
+            previousGuess = guess;
         }
     }
 
@@ -251,6 +320,28 @@ class AssignmentOne
         Console.WriteLine($"The sum with recurssion is {sum}");
     }
 
+    static void QuestionNineteen() {
+
+        Console.WriteLine("Question Ninteen");
+        List<int> fibonacci = new List<int>();
+
+        int a = 1;
+        int b = 1;
+
+        fibonacci.Add(a);
+        fibonacci.Add(b);
+
+        for (int i = 2; i < 100; i++)
+        {
+            int c = a + b;
+            fibonacci.Add(c);
+            a = b;
+            b = c;
+        }
+
+        Console.WriteLine($"fibonacci series is {string.Join(", ", fibonacci)}");
+    }
+
     static void QuestionTwenty() {
         List<int> finalArray = new List<int>();
         int num = 23456;
@@ -284,6 +375,39 @@ class AssignmentOne
         Console.WriteLine(horizontalLine);
     }
 
+    static void QuestionTwentyTwo() {
+        string str1 = "I AM MUDASSIR FAMILY";
+        string str2 = "I AM MUDASSIR FRIEND";
+        //string str1 = "Cat";
+        //string str2 = "Hat";
+
+        string commonString = "";
+
+        for (int i=0; i < str1.Length; i++) {
+            if (str1[i] == str2[i]) {
+                string newCommonString = "";
+                int commonInd = i;
+
+                while (str2[commonInd] == str1[commonInd]) {
+                    newCommonString += str1[commonInd].ToString();
+                    if (commonInd + 1 >= str1.Length) {
+                        if (newCommonString.Length > commonString.Length)
+                        {
+                            commonString = newCommonString;
+                        }
+                        break;
+                    }
+                    commonInd += 1;
+                }
+                if (newCommonString.Length > commonString.Length) {
+                    commonString = newCommonString;
+                }
+            }
+        }
+
+        Console.WriteLine($"LCS is {commonString}");
+    }
+
     static void QuestionTwentyFour () {
         int num;
         Console.Write("Enter an integer: ");
@@ -307,23 +431,24 @@ class AssignmentOne
         }
     }
 
-    static void QuestionEight () {
-        Console.WriteLine("Prime numbers between 1 and 100:");
-        for (int i = 2; i <= 100; i++)
-        {
-            bool isPrime = true;
-            for (int j = 2; j < i; j++)
-            {
-                if (i % j == 0)
-                {
-                    isPrime = false;
-                    break;
-                }
+    static void QuestionTwentySix () {
+        int number = 0;
+        Console.WriteLine("Enter number to check its armsstorng or not");
+        var input = Console.ReadLine();
+        if(int.TryParse(input, out number)) {
+            double total = 0;
+            for(int i =0; i < input.Length; i++) {
+                total += Math.Pow(int.Parse(input[i].ToString()), 3);
             }
-            if (isPrime)
-            {
-                Console.Write(i + " ");
+            if(input == total.ToString()) {
+                Console.WriteLine($"{input} is Armstrong");
+            }else {
+                Console.WriteLine($"{input} is not Armstrong");
             }
+        }
+        else {
+            Console.WriteLine("Invalid Output");
+            QuestionTwentySix();
         }
 
     }
@@ -347,6 +472,29 @@ class AssignmentOne
             Console.WriteLine(i + " is not a prime number ");
         }
         QuestionTwentySeven();
+    }
+
+    static void QuestionTwentyEight() {
+        int rows, coef = 1, space, i, j;
+
+        rows = 5;
+
+        for (i = 0; i < rows; i++)
+        {
+            for (space = 1; space <= rows - i; space++)
+                Console.Write("  ");
+
+            for (j = 0; j <= i; j++)
+            {
+                if (j == 0 || i == 0)
+                    coef = 1;
+                else
+                    coef = coef * (i - j + 1) / j;
+
+                Console.Write($"{coef}   ");
+            }
+            Console.WriteLine();
+        }
     }
 
     static void QuestionThirty() {
